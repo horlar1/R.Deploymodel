@@ -7,6 +7,6 @@ Maintainer: Taiwo Ogundare <taiwoogundare6@gmail.com>
 Description: Use for deploying models to sql, spark and hadoop
 License: GPL-2 | file LICENSE
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 Imports: RODBC,purrr
 RoxygenNote: 6.1.1
