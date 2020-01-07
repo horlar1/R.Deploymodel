@@ -4,13 +4,15 @@
 #' @param username username for authentication
 #' @param password for authenitication (if required)
 #' @export
+#' @importFrom RODBC odbcDriverConnect
 #' @seealso \code{\link[RODBC]{odbcConnect}}
 #' @examples \dontrun{
 #' # don't run this sript
+#' con = createConnection(server = "",database = "",username="",password="")
 #' }
-#' con = create_connection(server = "",database = "",username="",password="")
 
-createConnection <- function(server,database,username,password,...){
+
+createConnection <- function(server,database,username,password){
 
   if(missing(server))
     stop("missing argument 'server name'")

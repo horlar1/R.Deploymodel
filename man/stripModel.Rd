@@ -16,5 +16,4 @@ Strip and Remove unneccesary large files associated with models. The function he
 \dontrun{
 # don't run this sript
 }
-con = create_connection(server = "",database = "",username="",password="")
 }

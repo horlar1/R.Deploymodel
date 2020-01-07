@@ -2,19 +2,21 @@
 #' Create Procedure to accept and store a model
 #' @description Model Deployment
 #'
-#' @param connection a connection to the database from create connection
+#' @param connection a connection to the database from createConnection
 #' @param procedure_name name of the procedure to create
-#' @param table_name name to the table to store the model
+#' @param table_name name of the table to accept/store the model
 #'
+#' @importFrom RODBC sqlQuery
+#' @importFrom purrr is_empty
 #' @seealso \code{\link{createConnection}}
 #' @export
 #' @examples \dontrun{
 #' # don't run this sript
+#' con = createConnection(server = "",database = "",username="",password="")
+#' createProcedure(con,"model_procedure","model_table")
 #' }
-#' con = create_connection(server = "",database = "",username="",password="")
-#' create_procedure(con,"model_procedure","model_table")
 
-create_procedure <- function(connection,procedure_name,table_name,..){
+createProcedure <- function(connection,procedure_name,table_name){
 
   stopifnot(inherits(connection, c("RODBC")))
 

@@ -10,9 +10,9 @@ deployModel(connection, procedure_name, model, name, type, description,
 \arguments{
 \item{connection}{RODBC connection object returned by createConnection}
 
-\item{procedure_name}{name of the procedure as passed to create_procedure}
+\item{procedure_name}{name of the procedure as passed to createProcedure}
 
-\item{model}{model object as returned by serialize_model}
+\item{model}{model object as returned by serializeModel}
 
 \item{name}{name of the algorithm. example: Logistic Regression model, LightGBM model}
 
@@ -30,9 +30,9 @@ Deploy Model to SQL Server, Spark And Hadoop
 \examples{
 \dontrun{
 # don't run this sript
+ con = createConnection(server = "",database = "",username="",password="")
 }
-con = create_connection(server = "",database = "",username="",password="")
 }
 \seealso{
-\code{\link{createConnection} \link{create_procedure} \link{serializeModel}}
+\code{\link{createConnection} \link{createProcedure} \link{serializeModel}}
 }

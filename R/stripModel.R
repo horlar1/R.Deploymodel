@@ -4,11 +4,10 @@
 #' @param model a GLM or LM model
 #'
 #' @export
-#'
+#' @importFrom utils object.size
 #' @examples \dontrun{
 #' # don't run this sript
 #' }
-#' con = create_connection(server = "",database = "",username="",password="")
 
 stripModel <- function(model){
 

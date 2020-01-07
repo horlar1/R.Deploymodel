@@ -4,7 +4,7 @@
 \alias{createConnection}
 \title{Create a connection to the server}
 \usage{
-createConnection(server, database, username, password, ...)
+createConnection(server, database, username, password)
 }
 \arguments{
 \item{server}{server name for authentication (charcter string)}
@@ -21,8 +21,8 @@ Create a connection to the server
 \examples{
 \dontrun{
 # don't run this sript
+con = createConnection(server = "",database = "",username="",password="")
 }
-con = create_connection(server = "",database = "",username="",password="")
 }
 \seealso{
 \code{\link[RODBC]{odbcConnect}}
